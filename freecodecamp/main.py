@@ -1,1 +1,1 @@
-import RPS
+from lib import RPS
