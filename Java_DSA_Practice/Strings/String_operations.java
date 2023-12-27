@@ -46,7 +46,7 @@ public class String_operations {
         System.out.println("Lexicographically Largest String : " + largest);
     }
 
-    public static void firstLetterUppercase(String sentence){
+    public static void firstLetterUppercase(String sentence){ //O(N)
         //Using StringBuilder Class not string 
         StringBuilder sb = new StringBuilder("");
 
@@ -65,7 +65,7 @@ public class String_operations {
         System.out.println("After First Letter UpperCase Conversion : " + sb.toString());
     }
 
-    public static void stringCompression(String str){
+    public static void stringCompression(String str){ //O(N)
 
         StringBuilder sb = new StringBuilder("");
 
@@ -89,7 +89,7 @@ public class String_operations {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Choice :\n1. Palindrome - O(N)\n2. Shortest Route (EWNS) - O(N)\n3. Largest String Lexicographically - O(N)\n4. Convert First Letter to UpperCase - O(N)\n5. String Compression\n:");
+        System.out.println("Enter the Choice :\n1. Palindrome - O(N)\n2. Shortest Route (EWNS) - O(N)\n3. Largest String Lexicographically - O(N)\n4. Convert First Letter to UpperCase - O(N)\n5. String Compression - O(N)\n:");
         int choice = sc.nextInt();
 
         //Consume the newline character
