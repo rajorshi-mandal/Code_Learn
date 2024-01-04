@@ -120,6 +120,8 @@ public class Bit_operations {
         // System.out.println(countSetBits(15));
         // System.out.println(addIntNoOp(5));
         // swap(4, 6);
-        upperToLower();
+        // upperToLower();
+
+        
     }
 }
