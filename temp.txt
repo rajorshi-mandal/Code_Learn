@@ -1,2 +1,4 @@
 This is a testing file only for temporary testings
 testing control folder access settings 
+testing fully installed linux
+
