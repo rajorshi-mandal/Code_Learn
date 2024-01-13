@@ -2,3 +2,4 @@ This is a testing file only for temporary testings
 testing control folder access settings 
 testing fully installed linux
 
+again dual booted with win11 because of battery charging limitations
