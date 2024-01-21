@@ -2,6 +2,7 @@ package Divide_Conquer;
 
 public class Quick_Sort {
 
+    //TC - O(nlogn) worst case - O(n^2)
     public static int pivot(int[] arr, int l, int h){
         int pivot = arr[h];
         int i = l - 1;

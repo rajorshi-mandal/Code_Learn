@@ -2,6 +2,7 @@ package Divide_Conquer;
 
 public class Merge_Sort {
 
+    //TC - O(nlogn)
     public static void mergeSort(int[] arr ,int i ,int j){
         if(i >= j){
             return;
