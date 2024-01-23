@@ -80,7 +80,7 @@ public class Count_Inversions {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 4, 1, 3, 5};
+        int[] arr = {1, 4, 1, 1, 5};
 
         // System.out.println(countInversions(arr));
         System.out.println(countInversionOp(arr));

@@ -55,10 +55,42 @@ public class Majority_Element {
         return leftCount > rightCount ? left : right;
     }
 
+    public static int majorityElementMVA(int[] arr){ //Moore's voting algorithm
+        int ansIndex = 0;
+        int count = 1;
+
+        for(int i = 1;i < arr.length; i++){
+            if(arr[i] == arr[ansIndex]){
+                count++;
+            } else {
+                count--;
+            }
+
+            if(count == 0){
+                ansIndex = i;
+                count = 1;
+            }
+        }
+
+        int fCount = 0;
+        for(int i = 0; i < arr.length; i++){
+            //loop for majority element confirmation
+            if(arr[i] == arr[ansIndex]){
+                fCount++;
+            }
+        }   
+        if(fCount > arr.length/2){
+            return arr[ansIndex];
+        } else {
+            return -1;
+        }
+    }
+
     public static void main(String[] args) {
-        int[] arr = {1, 1, 3, 1, 1, 3, 3, 3};
+        int[] arr = {-1, 1, 1, 1, 2, 1};
 
         // System.out.println(majorityElement(arr));
-        System.out.println(majorityElementOp(arr, 0, arr.length - 1));
+        // System.out.println(majorityElementOp(arr, 0, arr.length - 1));
+        System.out.println(majorityElementMVA(arr));
     }
 }
