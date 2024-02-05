@@ -2,7 +2,7 @@ package Backtracking;
 
 import java.util.ArrayList;
 
-public class Rat_in_Maze {
+public class Rat_in_Maze_Int {
 
     public static boolean isSafe(int[][] maze, int x, int y) {
         return (x >= 0 && x < maze.length && y >= 0 && y < maze[0].length && maze[x][y] == 1);
