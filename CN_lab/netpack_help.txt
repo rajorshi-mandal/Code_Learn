@@ -525,6 +525,6 @@ DATA
     FORMAT = 'utf-8'
 
 FILE
-    /home/ironreaper/Documents/Computer_Network_Lab/networking_module/netpack.so
+    /home/ironreaper/Documents/Code_Learn/CN_lab/netpack.so
 
 
