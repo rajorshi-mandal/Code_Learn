@@ -55,7 +55,3 @@ while connection_status:
     # Get user input for sending message to the client
     message = input("Server: ")
     npk.send_data_to_tcp_client(c_s, message)
-
-    # # Check for incoming messages from the client
-    # client_data = npk.read_data_from_tcp_client(c_s)
-    # print(client_data)
