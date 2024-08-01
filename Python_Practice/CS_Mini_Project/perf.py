@@ -39,7 +39,12 @@ class PerformanceIndicesCalculator:
             if len(poles) > 0:
                 # Natural frequency and damping ratio
                 omega_n = np.abs(np.imag(poles[0]))
+                if omega_n == 0:
+                    raise ValueError("Omega_n is zero, cannot proceed with calculations")
+
                 damping_ratio = -np.real(poles[0]) / omega_n
+                if damping_ratio < 0 or damping_ratio >= 1:
+                    raise ValueError("Invalid damping ratio, results may be inaccurate")
 
                 # Performance indices
                 rise_time = (np.pi - np.angle(poles[0])) / (omega_n * np.sqrt(1 - damping_ratio**2))
@@ -53,9 +58,8 @@ class PerformanceIndicesCalculator:
             else:
                 self.results_label.config(text="No poles found")
         except Exception as e:
-            self.results_label.config(text="Error: Invalid input")
+            self.results_label.config(text=f"Error: {str(e)}")
 
-    
     def plot_response(self):
         try:
             num_coeffs = list(map(float, self.num_entry.get().split(',')))
@@ -105,9 +109,7 @@ class PerformanceIndicesCalculator:
             mplcursors.cursor(hover=True)
             plt.show()
         except Exception as e:
-            self.results_label.config(text="Error: Invalid input")
-
-
+            self.results_label.config(text=f"Error: {str(e)}")
 
     def calculate_indices(self, num_coeffs, denom_coeffs):
         poles = np.roots(denom_coeffs)
@@ -115,7 +117,12 @@ class PerformanceIndicesCalculator:
         indices = {}
         if len(poles) > 0:
             omega_n = np.abs(np.imag(poles[0]))
+            if omega_n == 0:
+                raise ValueError("Omega_n is zero, cannot proceed with calculations")
+
             damping_ratio = -np.real(poles[0]) / omega_n
+            if damping_ratio < 0 or damping_ratio >= 1:
+                raise ValueError("Invalid damping ratio, results may be inaccurate")
 
             # Performance indices calculation
             indices['Rise Time'] = (np.pi - np.angle(poles[0])) / (omega_n * np.sqrt(1 - damping_ratio**2))
