@@ -1,4 +1,4 @@
-package Array;
+package Array_Part_1;
 
 public class Pairs_Array {
     public static void main(String[] args) {
