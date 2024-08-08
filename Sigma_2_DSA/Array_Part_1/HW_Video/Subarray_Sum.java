@@ -2,7 +2,7 @@ package Array_Part_1.HW_Video;
 
 public class Subarray_Sum {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {1, -2, 6, -1, 3};
         printSubarrays(arr);
     }
 
@@ -18,7 +18,7 @@ public class Subarray_Sum {
                 int sum = 0;
                 System.out.print("{[");
                 for (int k = i; k <= j; k++) {
-                    System.out.print(arr[k]);
+                    System.out.print(arr[k] + " ");
                     sum += arr[k];
                 }
                 //update max sub array sum
